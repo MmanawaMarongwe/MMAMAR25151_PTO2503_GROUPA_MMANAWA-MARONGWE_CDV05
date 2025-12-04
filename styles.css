@@ -78,7 +78,6 @@ a {
   color: var(--color-text-soft);
 }
 
-/* accessibility: skip link */
 .skip-link {
   position: absolute;
   left: -999px;
@@ -91,4 +90,124 @@ a {
 }
 .skip-link:focus {
   left: 1rem;
+}
+
+.hero {
+  min-height: 100vh;
+  padding: 6rem 2rem 3rem; /* 6rem top = space for header */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-bg);
+}
+
+.hero-inner {
+  max-width: 720px;
+}
+
+.hero-kicker {
+  color: var(--color-accent);
+  font-size: 0.85rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.hero-title {
+  font-size: clamp(2.6rem, 6vw, 4rem);
+  color: var(--color-text-main);
+  font-weight: 700;
+  margin: 0 0 0.5rem;
+}
+
+.hero-tagline {
+  font-size: clamp(1.8rem, 4.5vw, 2.6rem);
+  color: var(--color-text-muted);
+  font-weight: 500;
+  margin: 0 0 1.6rem;
+}
+
+.hero-text {
+  max-width: 540px;
+  line-height: 1.7;
+  margin: 0 0 2.4rem;
+}
+
+.btn-primary {
+  display: inline-block;
+  padding: 0.85rem 1.7rem;
+  border-radius: 999px;
+  border: 1px solid var(--color-accent);
+  color: var(--color-accent);
+  background: rgba(24, 16, 11, 0.8);
+  font-size: 0.9rem;
+}
+
+@keyframes heroBgShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes heroJumpIn {
+  0% {
+    opacity: 0;
+    transform: translateY(24px) scale(0.96);
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(-4px) scale(1.02);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.hero-kicker,
+.hero-title,
+.hero-tagline,
+.hero-text,
+.hero-actions {
+  opacity: 0;
+  animation: heroJumpIn 0.85s ease-out forwards;
+}
+
+.hero-kicker {
+  animation-delay: 0.05s;
+}
+.hero-title {
+  animation-delay: 0.18s;
+}
+.hero-tagline {
+  animation-delay: 0.3s;
+}
+.hero-text {
+  animation-delay: 0.45s;
+}
+.hero-actions {
+  animation-delay: 0.6s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero {
+    animation: none;
+    background-position: 50% 50%;
+  }
+
+  .hero-kicker,
+  .hero-title,
+  .hero-tagline,
+  .hero-text,
+  .hero-actions {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
 }
