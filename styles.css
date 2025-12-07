@@ -382,3 +382,71 @@ a {
   box-shadow: 0 24px 55px rgba(15, 23, 42, 0.9);
   background: radial-gradient(circle at top right, #22d3ee22, #020617);
 }
+
+.learning-section {
+  background: var(--color-surface);
+  padding: 3.5rem 1.5rem;
+  border-radius: 12px;
+  border: 1px solid var(--color-border);
+  max-width: 720px;
+  margin: 2rem auto;
+}
+
+.learning-section h2 {
+  color: var(--color-text-main);
+  font-size: 1.9rem;
+  margin-bottom: 1rem;
+}
+
+.learning-section p {
+  color: var(--color-text-soft);
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.learning-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.5rem 0;
+}
+
+.learning-list li {
+  position: relative;
+  padding-left: 1.4rem;
+  margin-bottom: 0.6rem;
+  color: var(--color-text-soft);
+}
+
+.learning-list li::before {
+  content: "▹";
+  position: absolute;
+  left: 0;
+  color: var(--color-accent);
+}
+
+.site-footer {
+  text-align: center;
+  padding: 2rem 1.5rem;
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+  background: var(--color-bg);
+}
+
+.footer-socials {
+  margin-top: 0.75rem;
+  display: flex;
+  justify-content: center;
+  gap: 1.2rem;
+}
+
+.footer-socials a {
+  color: var(--color-text-soft);
+  font-size: 1rem;
+  font-weight: 800;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer-socials a:hover {
+  color: var(--color-accent);
+}
