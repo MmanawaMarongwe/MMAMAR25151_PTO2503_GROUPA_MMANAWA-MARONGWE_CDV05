@@ -516,3 +516,53 @@ a {
     margin-left: 1rem;
   }
 }
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .site-header {
+    padding: 0 1.5rem;
+  }
+
+  .hero {
+    padding: 5rem 2rem 2.5rem;
+    display: flex;
+    gap: 2.5rem;
+    align-items: center;
+  }
+
+  .hero-socials {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 0;
+  }
+
+  .hero-inner {
+    max-width: 40rem;
+  }
+
+  .hero-title {
+    font-size: 3rem;
+  }
+
+  .hero-tagline {
+    font-size: 1.6rem;
+  }
+
+  .hero-text {
+    font-size: 1rem;
+  }
+
+  .skills-card,
+  .learning-section {
+    margin-inline: auto;
+    padding: 1rem 1rem 1rem;
+  }
+  .project-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    padding: 2.5rem;
+  }
+
+  .project-image {
+    height: 380px;
+    padding: 1.5rem;
+  }
+}
